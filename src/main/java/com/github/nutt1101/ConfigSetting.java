@@ -183,7 +183,7 @@ public class ConfigSetting {
             if (plugin.getServer().getPluginManager().getPlugin("GriefPrevention") != null) {
                 griefPreventionFlag = griefPreventionFlag.stream()
                         .map(flag -> flag.substring(0, 1).toUpperCase() + flag.substring(1))
-                        .map(String::toUpperCase).collect(Collectors.toList());
+                        .collect(Collectors.toList());
                 for (int i = 0; i < griefPreventionFlag.size(); i++) {
                     ClaimPermission.valueOf(griefPreventionFlag.get(i));
                 }
